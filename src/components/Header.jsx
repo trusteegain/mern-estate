@@ -1,5 +1,6 @@
 import React from 'react'
 import {GoSearch} from 'react-icons/go'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -9,10 +10,13 @@ const Header = () => {
         <nav className='flex justify-between items-center max-w-6xl mx-auto p-3 gap-2'>
 
             {/* THIS IS THE LOGO TEXT */}
+
+     <Link to='/'>
         <h1 className='font-bold text-xl sm:text-xl flex flex-wrap cursor-pointer'>
             <span className='text-slate-500'>Trustee</span>
             <span className='text-slate-900 decoration-slate-900'>Gain</span>
         </h1>
+    </Link>
 
         {/* THIS IS THE SEARCH BAR  */}
         <form className='bg-slate-100 p-3 rounded-lg flex items-center'>
@@ -23,10 +27,20 @@ const Header = () => {
         {/* THIS IS THE MENU BAR */}
 
         <ul className='flex gap-4'>
+
+            <Link to='/'>
             <li className='hidden sm:inline text-slate-600 hover:underline'>Home</li>
+            </Link>
+
+            <Link to='/about'>
             <li className='hidden sm:inline text-slate-600 hover:underline'>About</li>
+            </Link>
+
+            <Link to='/sign-in'>
             <li className='text-slate-600 hover:underline'>Sign in</li>
+            </Link>
         </ul>
+
         </nav>
      </header>
   )
