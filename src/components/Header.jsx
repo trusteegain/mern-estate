@@ -1,5 +1,7 @@
 import React from 'react'
 import {GoSearch} from 'react-icons/go'
+import { BiSun } from 'react-icons/bi'
+import { RiAccountCircleLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -32,14 +34,30 @@ const Header = () => {
             <li className='hidden sm:inline text-slate-600 hover:underline'>Home</li>
             </Link>
 
+            <Link to='/blogs'>
+            <li className='hidden sm:inline text-slate-600 hover:underline'>Blogs</li>
+            </Link>
+            
+            <Link to='/new-blog'>
+            <li className='hidden sm:inline text-slate-600 hover:underline'>New Blog</li>
+            </Link>
+            
             <Link to='/about'>
-            <li className='hidden sm:inline text-slate-600 hover:underline'>About</li>
+            <li className='hidden sm:inline text-slate-600 hover:underline'>About Us</li>
+            </Link>
+            <Link to='/contact'>
+            <li className='hidden sm:inline text-slate-600 hover:underline'>Contact</li>
             </Link>
 
             <Link to='/sign-in'>
             <li className='text-slate-600 hover:underline'>Sign in</li>
             </Link>
         </ul>
+
+        <div className="toggleDark flex gap-4">
+            <BiSun className='w-6 h-6 cursor-pointer hover:text-slate-800'/>
+            <RiAccountCircleLine className='w-6 h-6' />
+        </div>
 
         </nav>
      </header>
